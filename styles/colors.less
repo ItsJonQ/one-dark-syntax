@@ -1,27 +1,41 @@
+// Global -----------------------------------
+:root {
+  --ZeroColorSyntax-hue:          220;
+  --ZeroColorSyntax-saturation:   13%;
+  --ZeroColorSyntax-brightness:   18%;
+  --ZeroColorMono-1:              hsl(@syntax-hue, 14%, 71%); // default text
+  --ZeroColorMono-2:              hsl(@syntax-hue,  9%, 55%);
+  --ZeroColorMono-3:              hsl(@syntax-hue, 10%, 40%);
+  --ZeroColorHue-1:               hsl(187, 47%, 55%); // <-cyan
+  --ZeroColorHue-2:               hsl(207, 82%, 66%); // <-blue
+  --ZeroColorHue-3:               hsl(286, 60%, 67%); // <-purple
+  --ZeroColorHue-4:               hsl( 95, 38%, 62%); // <-green
+  --ZeroColorHue-5:               hsl(355, 65%, 65%); // <-red 1
+  --ZeroColorHue-5-2:             hsl(  5, 48%, 51%); // <-red 2
+  --ZeroColorHue-6:               hsl( 29, 54%, 61%); // <-orange 1
+  --ZeroColorHue-6-2:             hsl( 39, 67%, 69%); // <-orange 2
+}
 
 // Config -----------------------------------
-@syntax-hue:          220;
-@syntax-saturation:   13%;
-@syntax-brightness:   18%;
+@syntax-hue: var(--ZeroColorSyntax-hue);
+@syntax-saturation: var(--ZeroColorSyntax-saturation);
+@syntax-brightness: var(--ZeroColorSyntax-brightness);
 
 
 // Monochrome -----------------------------------
-@mono-1: hsl(@syntax-hue, 14%, 71%); // default text
-@mono-2: hsl(@syntax-hue,  9%, 55%);
-@mono-3: hsl(@syntax-hue, 10%, 40%);
+@mono-1: var(--ZeroColorMono-1);
+@mono-2: var(--ZeroColorMono-2);
+@mono-3: var(--ZeroColorMono-3);
 
 // Colors -----------------------------------
-@hue-1:   hsl(187, 47%, 55%); // <-cyan
-@hue-2:   hsl(207, 82%, 66%); // <-blue
-@hue-3:   hsl(286, 60%, 67%); // <-purple
-@hue-4:   hsl( 95, 38%, 62%); // <-green
-
-@hue-5:   hsl(355, 65%, 65%); // <-red 1
-@hue-5-2: hsl(  5, 48%, 51%); // <-red 2
-
-@hue-6:   hsl( 29, 54%, 61%); // <-orange 1
-@hue-6-2: hsl( 39, 67%, 69%); // <-orange 2
-
+@hue-1: var(--ZeroColorHue-1);
+@hue-2: var(--ZeroColorHue-2);
+@hue-3: var(--ZeroColorHue-3);
+@hue-4: var(--ZeroColorHue-4);
+@hue-5: var(--ZeroColorHue-5);
+@hue-5-2: var(--ZeroColorHue-5-2);
+@hue-6: var(--ZeroColorHue-6);
+@hue-6-2: var(--ZeroColorHue-6-2);
 
 // Base colors -----------------------------------
 @syntax-fg:     @mono-1;
